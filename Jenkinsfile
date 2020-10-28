@@ -6,11 +6,11 @@ pipeline {
         echo 'Building...'
       }
     }
-    stage('Test Firefox') {
+    stage('Test') {
       parallel {
         stage('Test Firefox') {
           steps {
-            sh 'echo \'Testing Firefox\''
+            sh 'echo \'Testing Firefox\';exit 1'
           }
         }
         stage('Test Chrome') {
